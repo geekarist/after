@@ -1,22 +1,28 @@
 After
 =====
 
-Multi platform countdown timer application with tray icon
+Cross-platform countdown timer application with tray icon, written in Java.
+Inspired by [Orzeszek Timer](http://www.orzeszek.org/dev/timer/).
 
 Usage
 -----
 
-    $ after <seconds>
+    after <seconds> [command]
 
 Features
 --------
 
-- After some time, show an alarm popup.
-
-Planned features
-----------------
-
+- After some time, show an alarm popup
 - The tray icon shows the remaining time
+
+Planned
+-------
+
+- Cleanup code
+- Integration & unit tests
+- Improve application appearance
+- Choose time when launching
+- Launch a custom shell command when time elapsed
 
 Develop
 -------
