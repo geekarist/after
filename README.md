@@ -14,6 +14,7 @@ Features
 
 - After some time, show an alarm popup
 - The tray icon shows the remaining time
+- Choose time when launching
 
 Planned
 -------
@@ -21,7 +22,6 @@ Planned
 - Cleanup code
 - Integration & unit tests
 - Improve application appearance
-- Choose time when launching
 - Launch a custom shell command when time elapsed
 
 Develop

@@ -43,7 +43,6 @@ import org.capaxit.imagegenerator.impl.TextImageImpl;
 public class TrayIconDemo {
 
     public static void main(String[] args) {
-        System.out.println(args[0]);
         /* Use an appropriate Look and Feel */
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -54,14 +53,15 @@ public class TrayIconDemo {
         UIManager.put("swing.boldMetal", Boolean.FALSE);
         //Schedule a job for the event-dispatching thread:
         //adding TrayIcon.
+        final int timeMillis = Integer.parseInt(args[0]) * 1000;
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                createAndShowGUI();
+                createAndShowGUI(timeMillis);
             }
         });
     }
 
-    private static void createAndShowGUI() {
+    private static void createAndShowGUI(int timeMillis) {
         //Check the SystemTray support
         if (!SystemTray.isSupported()) {
             System.out.println("SystemTray is not supported");
@@ -176,8 +176,8 @@ public class TrayIconDemo {
         infoItem.addActionListener(listener);
         noneItem.addActionListener(listener);
 
-        final long targetTime = Calendar.getInstance().getTimeInMillis() + 10000;
-        final Timer timer = new Timer(10000, new ActionListener() {
+        final long targetTime = Calendar.getInstance().getTimeInMillis() + timeMillis;
+        final Timer timer = new Timer(timeMillis, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 trayIcon.setImage(timeIcon("0").getBufferedImage());
@@ -210,16 +210,14 @@ public class TrayIconDemo {
 
     //Obtain the image URL
     protected static Image createImage(String path, String description) {
-        URL imageURL = null;
-        imageURL = TrayIconDemo.class.getResource(path);
+        URL imageURL = TrayIconDemo.class.getResource(path);
 
         if (imageURL == null) {
             System.err.println("Resource not found: " + path);
             return null;
         } else {
-            TextImageImpl textImage = timeIcon("10");
-            Image trayIcon = (new ImageIcon(textImage.getBufferedImage(), description)).getImage();
-            return trayIcon;
+            TextImageImpl textImage = timeIcon("--");
+            return (new ImageIcon(textImage.getBufferedImage(), description)).getImage();
         }
     }
 
