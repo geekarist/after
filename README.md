@@ -19,8 +19,8 @@ Features
 Planned
 -------
 
-- Cleanup code
-- Integration & unit tests
+- Package as a linux command line application (shell script and jar file)
+- Integration & unit tests (use UISpec4J?)
 - Improve application appearance
 - Launch a custom shell command when time elapsed
 
