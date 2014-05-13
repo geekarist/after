@@ -15,11 +15,12 @@ Features
 - After some time, show an alarm popup
 - The tray icon shows the remaining time
 - Choose time when launching
+- Packaged as an executable jar
 
 Planned
 -------
 
-- Package as a linux command line application (shell script and jar file)
+- Create shell script for executing
 - Integration & unit tests (use UISpec4J?)
 - Improve application appearance
 - Launch a custom shell command when time elapsed
