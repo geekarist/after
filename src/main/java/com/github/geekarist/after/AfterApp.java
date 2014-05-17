@@ -17,7 +17,7 @@ public class AfterApp {
     private Timer timesUpTimer;
     private Timer trayUpdateTimer;
 
-    private AfterApp(int timeToAlarm) {
+    public AfterApp(int timeToAlarm) {
         this.timeToAlarm = timeToAlarm;
     }
 
@@ -98,6 +98,7 @@ public class AfterApp {
         final TrayIcon trayIcon
                 = new TrayIcon((new ImageIcon(textImage.getBufferedImage(), "tray icon")).getImage());
         trayIcon.setPopupMenu(popup);
+        trayIcon.setActionCommand("After");
         trayIcon.setImageAutoSize(true);
         return trayIcon;
     }

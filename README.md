@@ -16,12 +16,11 @@ Features
 - The tray icon shows the remaining time
 - Choose time when launching
 - Packaged as an executable jar
+- Shell script for executing with command line
 
 Planned
 -------
 
-- Create shell script for executing
-- Integration & unit tests (use UISpec4J?)
 - Improve application appearance
 - Launch a custom shell command when time elapsed
 
