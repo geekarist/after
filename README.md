@@ -21,8 +21,8 @@ Features
 Planned
 -------
 
-- Improve application appearance
 - Launch a custom shell command when time elapsed
+- Improve application appearance
 
 Develop
 -------
