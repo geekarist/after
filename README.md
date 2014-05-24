@@ -7,7 +7,7 @@ Inspired by [Orzeszek Timer](http://www.orzeszek.org/dev/timer/).
 Usage
 -----
 
-    after <seconds> [command]
+    after <duration>
 
 Features
 --------
@@ -21,6 +21,8 @@ Features
 Planned
 -------
 
+- Parse duration expressed as "XX min"
+- Print custom message when time elapsed
 - Launch a custom shell command when time elapsed
 - Improve application appearance
 
